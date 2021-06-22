@@ -1,0 +1,572 @@
+
+
+Playing with JSON object’s Values:
+
+Fluffy sorry, Fluffyy is my fav cat and it has 2 catFriends
+Write a code to get the below details of Fluffyy so that
+I can take him to vet.
+
+var cat = {
+ name: ‘Fluffy’,
+ activities: [‘play’, ‘eat cat food’],
+ catFriends: [
+ {
+ name: ‘bar’,
+ activities: [‘be grumpy’, ‘eat bread omblet’],
+ weight: 8,
+ furcolor: ‘white’
+ }, 
+ {
+ name: ‘foo’,
+ activities: [‘sleep’, ‘pre-sleep naps’],
+ weight: 3
+ }
+ ]
+}
+console.log(cat);
+
+
+
+
+
+
+
+
+
+
+1.Add height and weight to Fluffy
+
+ans:
+var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+]
+}
+
+cat.weigth=5;
+cat.heigth=4;
+console.log(cat)
+ 
+
+2.Fluffy name is spelled wrongly. Update it to Fluffyy
+
+ans:
+
+var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+]
+}
+
+
+cat.name='Fluffyy'
+console.log(cat)
+
+
+
+
+3.List all the activities of Fluffyy’s catFriends.
+
+ans:
+
+var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+]
+}
+
+var c=[]
+c.push(cat.catFriends[0].activities);
+c.push(cat.catFriends[1].activities);
+console.log(c)
+
+
+4.Print the catFriends names.
+
+ans:
+
+
+var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+]
+}
+console.log( cat.catFriends[0].name+" "+  cat.catFriends[1].name)
+
+
+
+5.Print the total weight of catFriends.
+
+ans:
+
+var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+]
+}
+
+
+console.log( cat.catFriends[0].weight+cat.catFriends[1].weight)
+
+
+
+6.Print the total activities of all cats (op:6)
+
+ans:
+
+var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+]
+}
+  var d=Object.key(cat.activities).length;
+  console.log(d)
+
+
+
+7.Add 2 more activities to bar & foo cats.
+
+
+ans:
+
+var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+]
+}
+
+cat.catFriends[0].activities.push('run','jump')
+cat.catFriends[1].activities.push('run','jump')
+console.log(cat.catFriends)
+
+8.Update the fur color of bar
+
+
+var cat = {
+ name: 'Fluffy',
+ activities: ['play', 'eat cat food'],
+ catFriends: [
+ {
+ name: 'bar',
+ activities: ['be grumpy', 'eat bread omblet'],
+ weight: 8,
+ furcolor: 'white'
+ }, 
+ {
+ name: 'foo',
+ activities: ['sleep', 'pre-sleep naps'],
+ weight: 3
+ }
+]
+}
+cat.catFriends[0].furcolor='black'
+console.log(cat.catFriends)
+
+
+
+Problem 0 : Part B (15 mins):
+Iterating with JSON object’s Values
+
+
+
+
+
+Above is some information about my car. As you can see, I am not the best driver.
+I have caused a few accidents.
+Please update this driving record so that I can feel better about my driving skills.
+var myCar = {
+ make: ‘Bugatti’,
+ model: ‘Bugatti La Voiture Noire’,
+ year: 2019,
+ accidents: [
+ {
+ date: ‘3/15/2019’,
+ damage_points: ‘5000’,
+ atFaultForAccident: true
+ },
+ {
+ date: ‘7/4/2022’,
+ damage_points: ‘2200’,
+ atFaultForAccident: true
+ },
+ {
+ date: ‘6/22/2021’,
+ damage_points: ‘7900’,
+ atFaultForAccident: true
+ }
+ ]
+}
+
+
+1. Loop over the accidents array. Change atFaultForAccident from true to false.
+
+
+ans:
+
+var myCar = {
+ make: 'Bugatti',
+ model: 'Bugatti La Voiture Noire',
+ year: 2019,
+ accidents: [
+ {
+ date: '3/15/2019',
+ damage_points: '5000',
+ atFaultForAccident: true
+ },
+ {
+ date: '7/4/2022',
+ damage_points: '2200',
+ atFaultForAccident: true
+ },
+ {
+ date: '6/22/2021',
+ damage_points: '7900',
+ atFaultForAccident: true
+ }
+ ]
+}
+for(var i=0;i<myCar.accidents.length;i++){
+    myCar.accidents[i].atFaultForAccident=false;
+}
+console.log(myCar);
+
+
+
+
+
+2.Print the dated of my accidents
+
+ans:
+var myCar = {
+ make: 'Bugatti',
+ model: 'Bugatti La Voiture Noire',
+ year: 2019,
+ accidents: [
+ {
+ date: '3/15/2019',
+ damage_points: '5000',
+ atFaultForAccident: true
+ },
+ {
+ date: '7/4/2022',
+ damage_points: '2200',
+ atFaultForAccident: true
+ },
+ {
+ date: '6/22/2021',
+ damage_points: '7900',
+ atFaultForAccident: true
+ }
+ ]
+}
+for(var i=0;i<myCar.accidents.length;i++){
+    
+console.log(myCar.accidents[i].date)
+}
+
+
+
+
+
+Problem 1 (5 mins):
+Parsing an JSON object’s Values:
+Write a function called “printAllValues” which returns an newArray of all the input object’s values.
+Input (Object):
+var object = {name: “RajiniKanth”, age: 33, hasPets : false};
+Output:
+[“RajiniKanth”, 33, false]
+
+
+ans:
+var obj = {name:"RajiniKanth", age : 33, hasPets : false};
+
+
+function printval(obj){
+var arr=Object.values(obj);
+console.log(arr)
+
+}
+
+
+printval(obj);
+
+
+
+
+
+
+
+
+
+Problem 2(5 mins) :
+Parsing an JSON object’s Keys:
+Write a function called “printAllKeys” which returns an newArray of all the input object’s keys.
+Example Input:
+{name : ‘RajiniKanth’, age : 25, hasPets : true}
+Example Output:
+[‘name’, ‘age’, ‘hasPets’]
+Sample Function proto:
+ans:
+
+
+var obj = {name:"RajiniKanth", age : 33, hasPets : false};
+
+
+function printval(obj){
+var arr=Object.keys(obj);
+console.log(arr)
+}
+
+
+printval(obj);
+
+
+
+
+
+Problem 3( 7–9 mins):
+Parsing an JSON object and convert it to a list:
+Write a function called “convertObjectToList” which converts an object literal into an array of arrays.
+Input (Object):
+var object = {name: “ISRO”, age: 35, role: “Scientist”};
+Output:
+[[“name”, “ISRO”], [“age”, 35], [“role”, “Scientist”]]
+Sample Function proto:
+var obj = {name: “ISRO”, age: 35, role: “Scientist”};
+function convertListToObject(obj) {
+ 
+}
+
+
+ans:
+
+var obj = {name: "ISRO", age: 35, role: "Scientist"};
+
+
+function convertListToObject(obj) {
+ 
+var arr=Object.entries(obj);
+console.log(arr);
+
+}
+
+convertListToObject(obj);
+
+
+
+
+Problem 4( 5 mins):
+Parsing a list and transform the first and last elements of it:
+Write a function ‘transformFirstAndLast’ that takes in an array, and returns an object with:
+1) the first element of the array as the object’s key, and
+2) the last element of the array as that key’s value.
+Input (Array):
+var array = [“GUVI”, “I”, “am”, “Geek”];
+Output:
+var object = {
+GUVI : “Geek”
+}
+Sample Function proto:
+var arr = [“GUVI”, “I”, “am”, “a geek”];
+function transformFirstAndLast(arr) {
+ 
+ return newObject;
+}
+
+
+ans:
+
+var arr = ["GUVI", "I", "am", "a geek"];
+
+function transformFirstAndLast(arr) {
+  var newObject={}
+
+var key=arr.shift();
+var value=arr.pop()
+
+newObject[key]=value;
+
+ return newObject;
+ }
+
+console.log(transformFirstAndLast(arr));
+
+
+
+
+
+Problem 5 ( 7 -9 mins):
+Parsing a list of lists and convert into a JSON object:
+Write a function “fromListToObject” which takes in an array of arrays, and returns an object with each pair of elements in the array as a key-value pair.
+Input (Array):
+var array = [[“make”, “Ford”], [“model”, “Mustang”], [“year”, 1964]];
+Output:
+var object = {
+make : “Ford”
+model : “Mustang”,
+year : 1964
+}
+Sample Function proto:
+var arr = [[“make”, “Ford”], [“model”, “Mustang”], [“year”, 1964]];
+function fromListToObject(arr) {
+ var newObject = {};
+ 
+ return newObject;
+}
+Problem 6 (10 mins):
+
+
+
+ans:
+
+var arr = [["make", "Ford"], ["model", "Mustang"], ["year", 1964]];
+
+
+function fromListToObject(arr) {
+ var newObject = {};
+ for(var i in arr){
+     newObject[arr[i][0]]=arr[i][1]
+ } 
+ 
+ return newObject;
+}
+
+
+console.log(fromListToObject(arr))
+
+
+
+
+Problem 9(20 mins):
+Parsing JSON objects and Compare:
+Write a function to return the list of characters below 20 age
+var students = [
+ {
+ name: “Siddharth Abhimanyu”, age: 21}, { name: “Malar”, age: 25},
+ {name: “Maari”,age: 18},{name: “Bhallala Deva”,age: 17},
+ {name: “Baahubali”,age: 16},{name: “AAK chandran”,age: 23},   {name:“Gabbar Singh”,age: 33},{name: “Mogambo”,age: 53},
+ {name: “Munnabhai”,age: 40},{name: “Sher Khan”,age: 20},
+ {name: “Chulbul Pandey”,age: 19},{name: “Anthony”,age: 28},
+ {name: “Devdas”,age: 56} 
+ ];
+function returnMinors(arr)
+{
+}
+console.log(returnMinors(students));
+ans:
+
+var students = [
+ {
+ name: "Siddharth Abhimanyu", age: 21}, { name: "Malar", age: 25},
+ {name: "Maari",age: 18},{name: "Bhallala Deva",age: 17},
+ {name: "Baahubali",age: 16},{name: "AAK chandran",age: 23},   {name:"Gabbar Singh",age: 33},{name: "Mogambo",age: 53},
+ {name: "Munnabhai",age: 40},{name: "Sher Khan",age: 20},
+ {name: "Chulbul Pandey",age: 19},{name: "Anthony",age: 28},
+ {name: "Devdas",age: 56} 
+ ];
+ 
+function returnMinors(arr)
+{
+    var k=[]
+    for(var i=0;i<students.length;i++){
+        
+        //console.log(students.length)
+        if(students[i].age<20){
+            k=students[i];
+            
+        console.log(k)
+            }   
+    } 
+   
+    
+}
+console.log(returnMinors(students));
+
+
+
+
+
