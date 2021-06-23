@@ -1,0 +1,63 @@
+//create n xml http request obj
+
+var request=new XMLHttpRequest();
+
+//initiate a connection
+ 
+request.open('GET','https://restcountries.eu/rest/v2/all',true);
+
+//sending the method
+ request.send();
+
+ //receiving the data
+ //data receiving from server is in string format
+ request.onload=function(){
+ var data=JSON.parse(this.response);
+ console.log(data);
+   // var a=data;
+   //var  count=0
+    //for(var i=0;i<a.length;i++){
+      //  console.log(a[i].name)
+       // count++;
+   // }
+    //console.log(a[1].name)
+    //console.log(count)
+
+
+
+//task :
+
+1.    //get all countries from asia region using filter function
+     var d=data.filter(function a(a){
+        if (a.region=='Asia'){
+          console.log( a.name)
+        }
+     })
+    
+ 2. //get all countries population less than 2 lac using filter function
+     var f=data.filter(function s(w){
+       if(w.population<200000){
+         console.log(w)
+       }
+
+     })
+
+3.     //print the country which uses us doller as currency     
+  
+       var r=data.filter(function e(g){
+      
+         if(g.currencies[0].code=='USD'){
+           console.log(g.name)
+         }
+       
+     })
+
+
+
+
+    //for(var i=0;i<data.length;i++){
+
+      //      console.log(data[i].capital+" ,"+ data[i].capital+" ,"+data[i].flag)
+        //}
+    }
+ 
