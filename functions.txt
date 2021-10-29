@@ -1,0 +1,368 @@
+
+//session task
+1.print the current weather data in console(temp)-by using lat lang of 250 countries.
+
+ans:
+
+var request=new XMLHttpRequest();
+
+request.open('GET','https://restcountries.eu/rest/v2/all',true)
+
+request.send();
+
+request. onload=function(){
+  
+    var data=JSON.parse(this.response);
+    //console.log(data)
+    for(i in data){
+        try{
+        var name=data[i].name;
+        var lang=data[i].latlng;
+       // console.log(name+ " "+ lang)
+       if(lang.length===0) throw new console.error("longitude is not available");
+              weatherdata(name,...lang)
+    }
+    catch(e){
+        console.log("invalid coordinates for  country"+name +" "+e.message)
+    }
+}
+
+}
+
+
+var weatherdata=function(name,lat,lan) {
+    //console.log(name+" "+lat+ ""+lan);
+ 
+    var request=new XMLHttpRequest()
+    var url='https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lan+'&appid=889412c77a03a9802a41ee7a138d833a&units=metric';
+    request.open('get',url,true)
+    request.send();
+
+    request.onload=function(){
+        try { 
+       var res=JSON.parse(this.response);
+        //console.log(`${name}: ${res.main.temp}`);
+       console.log(res.main.temp)
+      }  
+      catch(e){
+        console.log("invalid coordinates for  country"+name +" "+e.message)
+    }
+
+}
+
+}   
+
+
+
+
+
+  
+
+
+2.print odd no in an array
+
+ans:
+var arr=[1,2,3,4,5,6,7,8,9,10]
+  
+
+var a=function (arr){
+var f=arr.filter(num=>num%2)
+return f  
+} 
+ console.log(a(arr))
+
+
+
+  var arr=[1,2,3,4,5,6,7,8,9,10]
+  
+
+var a=(arr)=>{
+var f=arr.filter(num=>num%2)
+return f  
+}   
+  console.log(a(arr))
+
+
+
+
+3.convert all the strings to tile caps in string array
+
+var a=
+["Banana", "Orange", "Apple", "Mango"];
+
+
+
+
+
+
+4.sum of all no in an array
+
+ans:
+
+ var a=function(arr){
+       var  sum=0;
+      for(var i=0;i<arr.length;i++){
+         sum =sum+arr[i]
+      }
+      return sum
+   }
+   console.log(a(arr))
+
+
+var arr=[1,2,3,4,5,6,7,8,9,10]
+  
+   var reducer = (accumulator, currentValue) => accumulator + currentValue;
+   console.log(arr.reduce(reducer))
+
+5.return all prime no in an array
+
+ans:
+
+
+
+
+var  newArray = [1,  2, 3, 4,5,6,7,8,9];
+
+var  myPrime =function(newArray){ 
+
+ var k=newArray.filter(num => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return num !== 1;
+});
+return k
+}
+console.log(myPrime(newArray));
+
+
+
+
+
+
+
+var  newArray = [1,  2, 3, 4,5,6,7,8,9];
+
+var  myPrime = newArray.filter(num => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return num !== 1;
+});
+console.log(myPrime);
+
+
+
+
+
+
+
+Convert all the strings to title caps in a string array
+       
+
+   
+
+var s= function b(a){
+
+var n=  a.length
+for(var i=0;i<n;i++){
+    a[i]= a[i].charAt(0).toUpperCase() + a[i].slice(1);
+    
+}
+return a
+
+ 
+    
+}
+console.log(s(["aid","fuck"]))
+
+
+var c=(a)=>{
+     
+for(var i=0;i<a.length;i++){
+    a[i]= a[i].charAt(0).toUpperCase() + a[i].slice(1);
+     
+}
+return a
+}
+
+
+
+
+
+
+
+
+
+
+
+7.remove duplicates from an array
+
+ans:
+
+var arr=[1,2,3,45,1,6,3,7,9]
+
+var removedup=(arr)=>{
+       return [...new Set(arr)]
+     }
+     
+console.log(removedup(arr))
+
+
+
+var arr=[1,2,3,45,1,6,3,7,9]
+
+var removedup=function(arr){
+       return [...new Set(arr)]
+     }
+     
+console.log(removedup(arr))
+
+
+
+
+
+8.rotate an array by k times and return array
+ans:
+
+
+
+
+var arr=[1,2,3,45,1,6,3,7,9]
+   var k=2
+   var f=[]
+var rotate=function(arr,k){
+      
+     var a=[]
+      for(var i=0;i<k;i++){
+         f[i]= arr.shift(arr[k]);
+         
+      }
+      for(var j=0;j<f.length;j++){
+          arr.push(f[j])
+      }
+         
+        
+      return arr;    
+    
+     //  return [...new Set(arr)]
+     }
+     
+console.log(rotate(arr,k))
+
+
+
+
+
+
+
+
+var arr=[1,2,3,45,1,6,3,7,9]
+   var k=2
+   var f=[]
+var rotate=(arr,k)=>{
+      
+     var a=[]
+      for(var i=0;i<k;i++){
+         f[i]= arr.shift(arr[k]);
+         
+      }
+      for(var j=0;j<f.length;j++){
+          arr.push(f[j])
+      }
+         
+        
+      return arr;    
+    
+     //  return [...new Set(arr)]
+     }
+     
+console.log(rotate(arr,k))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9.return median of two sorted arrays of  same size
+ans:
+ var d=[1,2,3,4,5];
+    var b=[6,7,8,9,10]
+  
+
+var c=(d,b)=>{
+    var n,l
+    var f=d.concat(b);
+    var count=0
+    var count1=0
+    for(var i in d){
+        count++
+    
+        }
+        
+        n=parseInt(count/2)
+        m=d[n]
+    
+    for(var j in b){
+        count1++
+    }
+        
+        l=parseInt(count1/2)
+        j=b[l]
+    
+   var  median= parseInt(m+j/2);
+    
+     return median
+    
+    
+}
+ console.log(c(d,b))
+ 
+
+
+
+
+var d=[1,2,3,4,5];
+    var b=[6,7,8,9,10]
+  
+
+var c=function(d,b){
+    var n,l
+    var f=d.concat(b);
+    var count=0
+    var count1=0
+    for(var i in d){
+        count++
+    
+        }
+        
+        n=parseInt(count/2)
+        m=d[n]
+    
+    for(var j in b){
+        count1++
+    }
+        
+        l=parseInt(count1/2)
+        j=b[l]
+    
+   var  median= parseInt(m+j/2);
+    
+     return median
+    
+    
+}
+ console.log(c(d,b))
+
+
