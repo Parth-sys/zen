@@ -1,0 +1,72 @@
+Http1
+1.It is a Hypertext Transfer Protocol Version 1.1
+2.Http is developed by Timothyberners lee in 1989 as a communication standard for World Wide Web.
+3.It is a simple protocol used to transfer hypertext documents mostly text and few images.
+4.It is textual and  used to tranfer text documents.
+5.In 1999 the W3 updated its specification to version 1.1, its  meant to improve the speed and efficiency of web servers powering this new “hypermedia” version of the web.
+6.Multiplexing not used in Http 1.1
+7.It is slower than Http2
+
+
+Http2
+1.It is Hypertext Transfer Protocol Version 2
+2.It is developed Primarily at google with intention of reducing web Page load latency by using various techniques.
+3.Http2 uses different techniques like multiplexing ,prioritization etc.
+4.Http2 uses multiplexing to download multiple resources efficiently over single connection.
+5.SPDY protocol used in Http2.
+5.It is binary and it is fully multiplexed.
+6.Http2 is faster than http 1.1.
+
+
+
+
+Objects and its inter representaion in Javascript.
+
+Objects is composite datatype .
+It is used to store various keyed collections and more complex entities.
+A property of an object can be explained as a variable that is attached to the object.
+All javascript Objects inherit properties from prototype.
+prototype is a blueprint of an object prototype allow us to use properties and methods on an object evev if properties and methods
+do not exist on current object.
+Like all JavaScript variables, both the object name and property name are case sensitive. You can define a property by assigning it a value.
+A JavaScript object has properties associated with it. A property of an object can be explained as a variable that is attached to the object. Object properties are basically the same as ordinary JavaScript variables, except for the attachment to objects. 
+The properties of an object define the characteristics of the object. You access the properties of an object with a simple dot-notation:
+
+ObjectName.propertyName
+
+ You can define a property by assigning it a value. For example, let’s create an object named myCar and give it properties named make, model, and year as follows:
+var myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+
+Unassigned properties of an object are undefined (and not null).
+myCar.color; // undefined
+
+An object property name can be any valid JavaScript string, or anything that can be converted to a string,
+ including the empty string. However, any property name that is not a valid JavaScript identifier 
+(for example, a property name that has a space or a hyphen, or that starts with a number) can only be accessed using the square bracket notation
+
+you can create an object with these two steps:
+
+Define the object type by writing a constructor function. There is a strong convention, with good reason, to use a capital initial letter.
+Create an instance of the object with new.
+ex.
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+To instantiate the new objects, you then use the following:
+var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+var car2 = new Car('Nissan', '300ZX', 1992, ken);
+to find out name of the owner of the car we can access the following property:
+car2.owner.name
+we  can always  add property to the previously defined object.
+ex.
+     car1.color="black"
+
+
+adds a property color to car1, and assigns it a value of "black." However, this does not affect any other objects.
