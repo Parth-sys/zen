@@ -167,7 +167,7 @@ return a
  
     
 }
-console.log(s(["aid","fuck"]))
+console.log(s(["add","luck"]))
 
 
 var c=(a)=>{
@@ -178,7 +178,7 @@ for(var i=0;i<a.length;i++){
 }
 return a
 }
-
+console.log(s(["add","luck"]))
 
 
 
