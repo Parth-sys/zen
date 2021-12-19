@@ -1,0 +1,101 @@
+List 5 difference between Browser JS(console) v Nodejs
+BrowersJS:
+1.
+ "window" is a predefined global object which has functions and attributes, that have to deal with window that has been drawn.
+
+2."location" is another predefined object in browsers, that has all the information about the url we have loaded.
+3."document", which is also another predefined global variable in browsers, has the html which is rendered
+4.Browsers may have an object named "global", but it will be the exact one as "window".
+5.Browsers don't have "require" predefined. You may include it in your app for asynchronous file loading.
+
+
+
+
+Nodejs:
+1. Node doesn't have a predefined "window" object cause it doesn't have a window to draw anything.
+2."location" object is related to a particular url; that means it is for page specific. So, node doesn't require that.	
+ Ofcourse Node doesn't have "document" object also, cause it never have to render anything in a page.
+3.Node has "global", which is a predefined global object.
+ It contains several functions that are not available in browsers, cause they are needed for server side works only.
+4. "require" object is predefined in Node which is used to include modules in the app.
+5. In Node everything is a module. You must keep your code inside a module.
+
+
+High level Flow
+
+1.
+Flow of page.
+1.pasrse html
+2.parse css
+3.render tree
+4.layout
+5.paint
+
+2.Html Parsing
+1.html is forgiving by nature as there are some mistakes it works,that means parsing is not straight forward.
+2.In other languages if there is mistake in code it throws error, but in html it tries to cover that,so it can be halted.
+3.There is tokenizer in parsing.each text takes as token,so in <div></div>,it takes < character as token and parse the next text and it knows that it is div tag
+and it is <> start tag and  its  looking  for close tag ,if close tag is not there it simply close it .
+4.there is a parse tree it  is  a simple representation of html.
+5.as it gets script tag it stops parsing and it execute that and parse the next. links and style affect the Js execution.
+
+3.css Parsing.
+1.in css parsing it creates a tree ,i.e CSSOM css object model.
+2.In CSSOM there are styles,selectors ,rules,decorations etc.
+3.Page renders combining the DOM +CSSOM these two Object Models .
+4.DOM+CSSOM this  is the actual representation of what will show on screen.
+5.In the parsing it is not always necessarily,can happen parallel,javascript can affect those two running at the same time.
+6.there 4 trees which are:
+1.RenderObjects
+2.RenderStyles
+3.RenderLayers
+4.LineBoxes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Execute the below code and write your description in txt file
+typeof(1)
+typeof(1.1)
+typeof('1.1')
+typeof(true)
+typeof(null)
+typeof(undefined)
+typeof([])
+typeof({})
+typeof(NaN)
+
+Ans=>
+
+1. console.log(typeof(1));
+ =>Number
+console.log(typeof(1))
+=>Number
+console.log(typeof(1.1))
+=>Number
+console.log(typeof('1.1'))
+=>String
+console.log(typeof(true))
+=>Boolean
+console.log(typeof(null))
+=>Object
+console.log(typeof(undefined))
+=>undefined
+console.log(typeof([]))
+=>Object
+console.log(typeof({}))
+=>Object
+console.log(typeof(NaN))
+=>Number
+
+
+
