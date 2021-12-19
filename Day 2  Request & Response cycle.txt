@@ -45,7 +45,7 @@ and it is <> start tag and  its  looking  for close tag ,if close tag is not the
 3.Page renders combining the DOM +CSSOM these two Object Models .
 4.DOM+CSSOM this  is the actual representation of what will show on screen.
 5.In the parsing it is not always necessarily,can happen parallel,javascript can affect those two running at the same time.
-6.there 4 trees which are:
+6.There are 4 trees which are:
 1.RenderObjects
 2.RenderStyles
 3.RenderLayers
