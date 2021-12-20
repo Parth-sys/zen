@@ -1,0 +1,67 @@
+
+
+1.Write a “person” class to hold all the details.
+2.write a class to calculate uber price.
+
+
+
+
+class Person{
+  
+  constructor(Name,birthYear,City,MobileNumber){
+    this.Name=Name;
+    this.birthYear=birthYear;
+    this.City=City;
+    this.MobileNumber=MobileNumber;
+  }
+  
+  age(){
+    let date=new Date();
+    return date.getFullYear() - this.birthYear;
+
+  }
+  
+}
+
+var p1=new Person("Parth",1996,"dhule",8668812426);
+var p2=new Person("Raj",2000,"Pune",9850431245);
+console.log(p1)
+console.log("age"+ ":"+p1.age())
+console.log(p2)
+console.log( "age" +": "+p2.age())
+
+
+
+
+
+
+class Uber{
+  
+  constructor(Name,City,PickupLocation,destinationLocation,distance,MobileNumber){
+    this.Name=Name;
+    this.City=City;
+    this.PickupLocation=PickupLocation;
+    this.destinationLocation=destinationLocation
+    this.distance=distance
+    this.MobileNumber=MobileNumber
+    
+  }
+  
+ 
+  
+  
+  
+  CalculatePrice(){
+  var rateperKm=10;
+  return rateperKm*this.distance
+
+  }
+  
+}
+
+var p1=new Uber("Parth","dhule","wadibhokar road","MIDC",26,9899809877);
+var p2=new Uber("Raj","Pune","Katraj","Pune university",12,9850431245);
+console.log(p1)
+console.log("Price"+ ":"+p1.CalculatePrice())
+console.log(p2)
+console.log( "Price" +": "+p2.CalculatePrice())
