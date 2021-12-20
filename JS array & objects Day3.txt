@@ -1,0 +1,109 @@
+
+ 1.For the given JSON iterate over all for loops (for, for in, for of, forEach)
+2.Create your own resume data in JSON format
+
+
+
+var data=
+[{
+  "Name":" Parthsarthi Bharat Chandratre",
+"Mob": 8668812426,
+"Email": "9156parth@gmail.com",
+
+"Courses":[
+  
+ {
+   "CourseName1":"FullStack Development",
+"Description":"Guvi An IIT-M & IIM-Aincubated Company"
+
+},
+
+{
+"CourseName2" :"B.E. (COMP)" ,
+"CollegeName":"SSVPS BSD College of Engineering, Dhule",
+"Marks":7.17
+},
+
+{
+"CourseName3": " DIPLOMA(Comp)",
+"CollegeName":"  Government Polytechnic, Dhule MSBTE Mumbai",
+"Marks":66.19,
+},
+
+{ 
+"CourseName4":"SSC",
+ "SchoolName":" Jai hind high School,Dhule",
+"Marks": 77.80
+}
+
+],
+
+ "B.E.Project": [
+
+{"Name": "Online Street Food Delivery System",
+  "Description": ` In this project we provide various street food items with their categories and according to user or
+customer need. They can order their favourite food here. We build two separate apps, one for Merchants
+which act as a server and process client requests and another for clients who can request the food they
+want`},
+
+  
+{ "Name": "The Java Learning App",
+ "Description": "The Java Learning app is all about Java Concepts. It consists of three sections. Theory, Practical andExamination based on MCQs"
+},
+
+],
+
+ "Diploma Project":[ 
+{
+  "Name": "Formula App",
+ "Description": "This app helps to get instant revision on formulas for any competitive exams"
+}
+],
+
+ "Languages" : ["C" ,"C++", "Java", "SQL", "javascript","Html","Css"],
+ "OS" : ["Windows7", "Linux", "XP", "Ubuntu"," Android"],
+ "Tools" :[ "Android Studio","Expo"],
+"Workshop & Industrial Visits":[
+ "Two week Industrial Training on Ethical IT Consultant"],
+
+
+"Extra-Curricular Activities":[
+ "Participated in intercollegiate “Box Cricket” competition",
+"Participated in “C-Quest” competition",
+ "Winner in “Football” competition at division level."],
+
+"Personnel Details":
+[
+{"Date of Birth" : "21/07/1996"},
+
+{"Marital Status" : "Single"}
+],
+
+"Linguistic Proficiency" :[ "English", "Marathi", "Hindi"],
+
+"Hobbies & Interest" :[  "Playing Football", "BodyBuilding","Travelling"]
+
+}]
+
+
+
+
+for(var i=0;i<data.length;i++){
+  console.log(data[i])
+}
+
+
+
+for(i in data){
+  console.log(data[i])
+}
+
+
+data.forEach(c=>console.log(c))
+
+
+
+
+for(const ele of data){
+  console.log(ele.Courses)
+}
