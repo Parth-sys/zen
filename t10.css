@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+ table td, table th {
+        text-align:center;
+        border: 1px solid black;
+ }
+
+#title{
+text-align:center
+}
+
+th{
+    vertical-align: center;
+}
+td:empty:after {
+    content: "\00a0"; /* HTML entity of &nbsp; */
+  }
