@@ -1,0 +1,169 @@
+The following are the queries need to be executed
+
+1. Create tables for the above list given
+
+  create table users(
+PersonId int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+
+);
+
+
+create table codekata(
+
+  UseraName varchar(255),
+  PersonId int,
+  TopicName varchar(255),
+   QuestionS int,
+   QuestionsR int
+
+);
+
+
+create table attendance(
+
+FirstName varchar(255),
+LastName varchar(255),
+PersonId int,
+Attendance int,
+CourseName varchar(255)
+
+);
+
+create table topics(
+PersonId int,
+TopicName varchar(255),
+TpoicsCompleted int,
+TopicsRemain int,
+TopicId int
+);
+
+create table tasks(
+PersonId int,
+CourseName varchar(255),
+TaskName varchar(255),
+TaskC int;
+TaskR int;
+
+);
+
+
+
+create table company_drives(
+PersonId int,
+CompanyName varchar(255),
+StudentA int,
+StudentN int,
+RequireS int
+);
+
+
+create table mentors(
+PersonId int,
+MentorId int,
+MentorName varchar(255),
+MentorLastname varchar(255),
+MentorS int
+);
+
+create table student_activated_courses(
+PersonId int;
+CourseName varchar(255),
+CourseDuration varchar(255),
+CourseSCount int,
+CouserFee 
+);
+
+create table courses(
+CourseId int,
+CourseName varchar(255),
+CourseDuration varchar(255),
+CouserFee varchar(255),
+CourseTech varchar(255),
+);
+
+
+
+
+
+
+
+
+
+
+
+2. insert at least 5 rows of values in each table
+
+   1.users table
+ insert into users values(1,"Patil","Ajay","35 lt road dhule","Dhule");
+   insert into users values (2,"Patil","Raja","36 lt road","Dhule");
+   insert into users  values(3,"Chaudhari","rohit","21 patilwadi","Pune");
+    insert into users values(4,"khilosiya","reena","12 parola road","Indore");
+    insert into users values (5,"solanki","rusha","11,dongreMaharaj nagar","Dhule")
+
+ 
+  2.codekata
+
+   insert into codekata values("rusha",5,"Algo",4,100 );
+    insert into codekata values("reena",4,"string",12,132);
+     insert into codekata values("Ajay",1,"sorting",11,232);
+     insert into codekata values( "Raja",2,"searching",11,34);
+     insert into codekata values("rohit",3,"Math",23,11);
+  
+  3.attendance 
+
+    insert into attendance values("Ajay","Patil",1,12,"Fullstack development");
+     insert into attendance values("reena","khilosiya",4,13,"Fullstack development");
+     insert into attendance values("rusha","solanki",5,12,"Fullstack development");
+    insert into attendance values("Raja","Patil",2,11,"Fullstack development");
+      insert into attendance values("rohit","chaudhari",3,16,"Fullstack development");
+
+
+   4.topics
+     insert into topics values("1","Ds",4,5,1001);
+    insert into topics values("2","algo",4,6,1002);
+    insert into topics values("3","string",2,5,1003);
+    insert into topics values("4","Math",6,5,1004);
+      insert into topics values("5","sort",7,3,1005);
+
+
+   5.task
+    PersonId int,
+CourseName varchar(255),
+TaskName varchar(255),
+TaskC int;
+TaskR int;
+
+   insert into task values(1,"Fullstack development","String",12,3);
+     insert into task values(2,"Fullstack development","Ds",14,5);
+       insert into task values(3,"Fullstack development","sort",11,4);
+         insert into task values(4,"Fullstack development","searching",16,2);
+           insert into task values(5,"Fullstack development","algo",11,7);  
+
+
+
+
+
+
+
+3. get number problems solved in codekata by combining the users
+  
+      select Count(QuestionS) ,Count(PersonId)  from codekata;  
+
+4. display the no of company drives attended by a user
+   Select  StudentA,Count(CompanyName) from Comapany_Drives where PersonId=1;
+
+5. combine and display students_activated_courses and courses for a specific user groping them based on the course
+  
+  select courseName.courses from courses join student_activates_courses on PersonId.student_activates_couses=CouserId.courses group by courseName;
+
+
+6. list all the mentors
+
+select * from mentors;
+ 
+7  . list the number of students that are assigned for a mentor
+     Select MentorS from mentor join on users on mentor.MentorS=user.PersonId 
