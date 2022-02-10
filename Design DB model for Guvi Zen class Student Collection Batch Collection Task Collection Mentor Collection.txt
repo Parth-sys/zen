@@ -1,0 +1,272 @@
+[{"_id":{"$oid":"61a4b881afa545b81cf615b5"},
+"StudentName":"Rahul",
+"LastName":"Chaudhary",
+"CourseName":"Full stack Development",
+"TaskCompleted":"10",
+"TaskRemain":"12",
+"MentorId":"110",
+"Grade":"A",
+"id":1,
+"__v":0
+}
+{"_id":{"$oid":"61a4b881afa545b81cf615b5"},
+"StudentName":"Raj",
+"LastName":"Chaudhary",
+"CourseName":"Full stack Development",
+"TaskCompleted":"11",
+"TaskRemain":"15",
+"MentorId":"120",
+"Grade":"A+",
+"id":2,
+"__v":0
+}
+{"_id":{"$oid":"61a4b881afa545b81cf615b5"},
+"StudentName":"Swati",
+"LastName":"Patil",
+"CourseName":"Full stack Development",
+"TaskCompleted":"13",
+"TaskRemain":"17",
+"MentorId":"121",
+"Grade":"B",
+"id":3,
+"__v":0
+}
+
+
+{"_id":{"$oid":"61a4b881afa545b81cf615b5"},
+"StudentName":"Vyankat",
+"LastName":"Srinivas",
+"CourseName":"Full stack Development",
+"TaskCompleted":"19",
+"TaskRemain":"11",
+"MentorId":"146",
+"Grade":"B+",
+"id":4,
+"__v":0
+}
+
+{"_id":{"$oid":"61a4b881afa545b81cf615b5"},
+"StudentName":"viraj",
+"LastName":"desai",
+"CourseName":"Full stack Development",
+"TaskCompleted":"22",
+"TaskRemain":"8",
+"MentorId":"122",
+"Grade":"A+",
+"id":5,
+"__v":0
+}
+
+
+{"_id":{"$oid":"61a4b881afa545b81cf615b5"},
+"StudentName":"Rohan",
+"LastName":"Dharne",
+"CourseName":"Full stack Development",
+"TaskCompleted":"23",
+"TaskRemain":"7",
+"MentorId":"121",
+"Grade":"C",
+"id":6,
+"__v":0
+}]
+
+[
+ {
+   BatchId:"1",
+   CourseName:"Full stack Development",
+   BatchStartTime:"9:30 AM"
+   BatchEndTime:"1:00 PM",
+   BatchMentorId:"12"
+   "BatchType":"WeekDays"
+ } 
+  
+  {
+   BatchId:"2",
+   CourseName:"Full stack Development",
+   BatchStartTime:"2:00 PM"
+   BatchEndTime:"5:00 PM",
+   BatchType:"WeekDays",
+   BatchMentorId:"10"
+ } 
+ {
+   BatchId:"3",
+   CourseName:"Full stack Development",
+   BatchStartTime:"7:00 PM",
+   BatchEndTime:"10:00 PM",
+   BatchType:"WeekendDays"
+   BatchMentorId:"15"
+ } 
+ 
+ {
+   BatchId:"4",
+   CourseName:"Full stack Python Development",
+   BatchStartTime:"5:00 PM",
+   BatchEndTime:"8:00 PM",
+   BatchType:"WeekDays"
+   BatchMentorId:"13"
+ } 
+  {
+   BatchId:"5",
+   CourseName:"Full stack Angular Development",
+   BatchStartTime:"1:00 PM",
+   BatchEndTime:"4:00 PM",
+   BatchType:"WeekDays"
+   BatchMentorId:"19"
+ } 
+ {
+   BatchId:"6",
+   CourseName:"Full stack Java Development",
+   BatchStartTime:"3:00 PM",
+   BatchEndTime:"6:00 PM",
+   BatchType:"WeekendDays"
+   BatchMentorId:"18"
+ } 
+]
+
+
+[
+ {
+  StudentId:"1",
+  CourseName:"Full stack Development",
+  TaskCompleted:"10",
+  TaskRemain:"10",
+  AverageGrade:"A",
+  
+  
+ } 
+  
+  {
+   
+  StudentId:"2",
+  CourseName:"Full stack Development",
+  TaskCompleted:"12",
+  TaskRemain:"14",
+  AverageGrade:"c",
+  
+  
+ 
+ } 
+ {
+   
+  StudentId:"3",
+  CourseName:"Full Stack   Development",
+  TaskCompleted:"10",
+  TaskRemain:"10",
+  AverageGrade:"A",
+  
+  
+  
+ } 
+ 
+ {
+    
+  StudentId:"4",
+  CourseName:"Full Stack Java Development",
+  TaskCompleted:"13",
+  TaskRemain:"18",
+  AverageGrade:"C",
+  
+  
+ 
+ } 
+  {
+   
+  StudentId:"5",
+  CourseName:"Full stack Angular Development",
+  TaskCompleted:"15",
+  TaskRemain:"15",
+  AverageGrade:"B",
+  
+  
+ 
+ } 
+ {
+    
+  StudentId:"6",
+  CourseName:"Full Stack Python Development",
+  TaskCompleted:"40",
+  TaskRemain:"10",
+  AverageGrade:"B",
+  
+  
+ 
+ } 
+]
+
+
+[
+ {
+ "MentorId":"110",
+ MentorName:"Ravi",
+ MLastName:"shastri",
+ MentorBatch:"5",
+ BatchType:"WeekDays",
+ 
+  
+ } 
+  
+  {
+   
+  "MentorId":"120",
+ MentorName:"Raj",
+ MLastName:"srinivast",
+ MentorBatch:"3",
+ BatchType:"WeekDays",
+ 
+  
+  
+ 
+ } 
+ {
+   
+   "MentorId":"112",
+ MentorName:"Raghav",
+ MLastName:"Kumar V",
+ MentorBatch:"1",
+ BatchType:"WeekDays",
+ 
+  
+  
+  
+ } 
+ 
+ {
+    
+ 
+   "MentorId":"111",
+ MentorName:"Rohan",
+ MLastName:"Chandrashelkaran",
+ MentorBatch:"4",
+ BatchType:"WeekendDays",
+ 
+  
+ 
+ } 
+  {
+   
+  
+   "MentorId":"102",
+ MentorName:"swati",
+ MLastName:"narayan",
+ MentorBatch:"2",
+ BatchType:"WeekendDays",
+ 
+ 
+ } 
+ {
+    
+  "MentorId":"110",
+ MentorName:"Raja",
+ MLastName:"shekhar",
+ MentorBatch:"6",
+ BatchType:"WeekDays",
+ 
+  
+  
+ 
+ } 
+]
+
+
+
+
