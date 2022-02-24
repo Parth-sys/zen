@@ -1,0 +1,90 @@
+1.Declare four variables without assigning values and print them in console
+=> var one, two ,three, four;
+ console.log(one,two,three,four);
+    
+
+2.write a code to count the elements in the array . Don’t use length property
+=>
+var myarray=[11,22,33,44,55]
+ var cout=0;
+   const Iterator=myarray.values();
+   var count=0;
+   for(const value of Iterator){
+     count++
+   }
+  console.log(count)
+
+
+
+3.Find the average in the array below.
+const friendsInfo = [6, 12, "Mari", 1, true, "Munnabai", "200", "CaptianAmerica", 8, 10];
+  var count=0;
+  var add=0;
+  var count=0;
+  
+for(var i=0;i<friendsInfo.length;i++){
+  if(typeof(friendsInfo[i]) === "number"){
+    add+=friendsInfo[i];
+    count++;
+}
+}
+console.log(" Average is :"+    add/count);
+
+
+
+ 4. var input = [
+[" 0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
+["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
+["0003", "Winona”, “Ambon", "25/12/1965", "Memasak"],
+["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
+]
+
+
+=>
+function dataHandling(input){
+for (var i = 0; i < input.length; i++) {
+console.log(input[i])
+}
+}
+dataHandling(input);
+
+
+5.Write a loop that makes seven calls to console.log to output the following triangle:
+#
+##
+###
+####
+#####
+######
+#######
+
+
+=>
+ for(i="#";i<8;i+="#"){
+   console.log(i)
+}
+
+
+6.Starting from the friends variable below, Loop and Print the names till you meet CaptianAmerica.
+const friends = [
+"Mari",
+"MaryJane",
+"CaptianAmerica",
+"Munnabai",
+"Jeff",
+"AAK chandran"
+];
+
+function dataHandling(input){
+var count=0
+for (var i = 0; i < input.length; i++) {
+  if(input[i] =="CaptianAmerica"){
+  
+       break;       
+   }
+  count++; 
+
+}
+console.log(count)
+}
+dataHandling(friends);
